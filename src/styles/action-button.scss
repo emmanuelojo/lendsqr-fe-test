@@ -1,0 +1,34 @@
+$primary-color: #39CDCC;
+$danger-color: #E4033B;
+
+.action-button {
+    min-width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.42px;
+    letter-spacing: 0.1em;
+    padding: 4px;
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.success {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+
+    &.danger {
+        border: 1px solid $danger-color;
+        color: $danger-color;
+    }
+}

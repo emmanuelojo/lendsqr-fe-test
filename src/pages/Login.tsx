@@ -24,7 +24,7 @@ const Login = () => {
         dispatch(setUserEmail(data.email));
         localStorage.setItem("auth", "true");
 
-        navigate("/");
+        navigate("/users");
     };
     return (
         <div className="login">
