@@ -4,3 +4,16 @@ body {
   padding: 0;
   font-family: "Avenir Next";
 }
+
+.screen {
+  height: 100%;
+  align-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: #FBFBFB;
+
+  @media screen and (min-width:1180px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}

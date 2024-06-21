@@ -1,0 +1,181 @@
+$primary-color: #39CDCC;
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+
+nav {
+    position: relative;
+    height: 100px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: #FFFFFF;
+    padding: 0 12px;
+
+    .search {
+        max-width: 75%;
+        height: 40px;
+        display: flex;
+
+        input {
+            width: 344px;
+            padding: 0 8px;
+            border: 1px solid #213F7D;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+
+            &:focus {
+                border: 2px solid rgba(57, 205, 204, 1);
+                outline: none;
+            }
+        }
+
+        .search-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 56px;
+            height: 40px;
+            background-color: #39CDCC;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+        }
+    }
+
+    .right-section,
+    .user-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .right-section {
+        gap: 12px;
+
+        a {
+            display: none;
+            font-family: "Roboto", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.75px;
+            color: $primary-text-color;
+        }
+
+        .notification {
+            display: none;
+        }
+
+        .user-section {
+            display: none;
+            gap: 8px;
+
+            .user-image {
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .profile {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 4px;
+
+                p {
+                    display: none;
+                    font-family: "Work Sans", Arial, sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 18.77px;
+                    color: #213F7D;
+                }
+            }
+        }
+
+        .hamburger-wrapper {
+            padding: 8px;
+
+            .hamburger {
+                background: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                .line {
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background-color: $primary-text-color;
+                    margin-block: 7px;
+                    border-radius: 4px;
+                    transition:
+                        transform 0.5s,
+                        opacity 0.25s;
+                }
+
+                &.active .line:nth-child(1) {
+                    transform: translateY(13px) rotate(45deg);
+                }
+
+                &.active .line:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &.active .line:nth-child(3) {
+                    transform: translateY(-13px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+
+    @media screen and (min-width:640px) {
+        padding: 0 20px;
+
+        .search {
+            max-width: 400px;
+        }
+
+        .right-section {
+            gap: 24px;
+
+            .notification {
+                display: block;
+            }
+
+            .user-section,
+            .profile p {
+                display: flex;
+            }
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        padding: 0 20px;
+
+        .right-section {
+            a {
+                display: block;
+            }
+
+            .notification {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @media screen and (min-width:1440px) {
+        padding: 0 40px;
+
+        .right-section {
+            .user-section .profile p {
+                display: block;
+            }
+
+            .hamburger-wrapper {
+                display: none;
+            }
+        }
+    }
+}

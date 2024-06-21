@@ -1,0 +1,224 @@
+$primary-color: #39CDCC;
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -283px;
+    width: 283px;
+    height: 100vh;
+    min-height: 100%;
+    max-height: 100vh;
+    background: #FFFFFF;
+    z-index: 100;
+    transition: 0.5s ease-in;
+
+    &.open {
+        left: 0;
+    }
+
+    .wrapper {
+        width: 283px;
+        height: 100vh;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: #FFFFFF;
+        z-index: 10;
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-family: "Work Sans", Arial, sans-serif;
+
+        header {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            padding: 35px 30px;
+        }
+
+        .inner {
+            display: grid;
+            gap: 16px;
+        }
+
+        .organization {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 20px 30px;
+
+            select {
+                border: none;
+                color: $primary-text-color;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18.77px;
+                text-align: left;
+            }
+        }
+
+        .sidebar-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.77px;
+            text-align: left;
+            color: $secondary-text-color;
+        }
+
+        .dashboard {
+            padding-bottom: 10px;
+
+            a {
+                text-decoration: none;
+
+                >div {
+                    height: 40px;
+                    position: relative;
+                    padding: 0 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    >.bar {
+                        display: none;
+                        width: 4px;
+                        height: 40px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        background-color: $primary-color;
+                    }
+                }
+
+                &.active>div,
+                &>div:hover {
+                    background-color: #F3FCFC;
+
+                    .bar {
+                        display: block;
+                    }
+
+                    p {
+                        color: $primary-text-color;
+                    }
+                }
+            }
+        }
+
+        .inner section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            .section-header {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14.08px;
+                text-align: left;
+                color: $secondary-text-color;
+                text-transform: uppercase;
+                padding: 0 30px;
+            }
+
+            .main-nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 4px;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18.77px;
+                    text-align: left;
+                    text-decoration: none;
+                    color: inherit;
+
+                    >div {
+                        height: 40px;
+                        position: relative;
+                        padding: 0 30px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .bar {
+                            display: none;
+                            width: 4px;
+                            height: 40px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            background-color: $primary-color;
+                        }
+                    }
+
+                    &.active>div,
+                    &>div:hover {
+                        background-color: #F3FCFC;
+                    }
+
+                    &>div:hover>.bar,
+                    &.active>div>.bar {
+                        display: block;
+                    }
+
+                    &.active>div>p {
+                        color: $primary-text-color;
+                    }
+                }
+            }
+        }
+
+        .sidebar .wrapper .dashboard a.active>div,
+        .sidebar .wrapper .inner section .main-nav a.active>div,
+        .sidebar .wrapper .inner section .main-nav a>div:hover {
+            background-color: #F3FCFC;
+        }
+
+        .sidebar .wrapper .dashboard a.active>div>.bar,
+        .sidebar .wrapper .inner section .main-nav a>div:hover>.bar,
+        .sidebar .wrapper .inner section .main-nav a.active>div>.bar {
+            display: block;
+        }
+
+        .sidebar .wrapper .dashboard a.active>div>p,
+        .sidebar .wrapper .inner section .main-nav a.active>div>p {
+            color: $primary-text-color;
+        }
+
+        .logout-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 16px 30px 30px 30px;
+            border-top: 1px solid $primary-text-color;
+
+            .logout {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+            }
+
+            .app-version {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 14.08px;
+                text-align: left;
+                color: $secondary-text-color;
+            }
+        }
+    }
+
+    @media screen and (min-width:1440px) {
+        position: relative;
+        left: 0;
+    }
+}
