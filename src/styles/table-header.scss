@@ -1,0 +1,117 @@
+$primary-color: #39CDCC;
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+
+.table-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    font-family: "Work Sans", Arial, sans-serif;
+
+    div {
+        height: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        white-space: nowrap;
+
+        >p {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14.08px;
+            text-align: left;
+            text-transform: uppercase;
+            color: $secondary-text-color;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .organization {
+        width: 35%;
+    }
+
+    .username {
+        width: 30%;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .status {
+        width: 25%;
+    }
+
+    .more {
+        width: 10%;
+    }
+
+    @media screen and (min-width:640px) {
+        .organization {
+            width: 30%;
+        }
+
+        .username {
+            width: 25%;
+        }
+
+        .mobile {
+            width: 20%;
+            display: flex;
+        }
+
+        .status {
+            width: 17%;
+        }
+
+        .more {
+            width: 8%;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        width: 100%;
+        gap: 20px;
+
+        .organization {
+            width: 12%;
+        }
+
+        .username {
+            width: 11%;
+        }
+
+        .email {
+            width: 15%;
+            display: flex;
+        }
+
+        .mobile {
+            width: 13%;
+        }
+
+        .date {
+            width: 16%;
+            display: flex;
+        }
+
+        .status {
+            width: 10%;
+        }
+
+        .more {
+            width: 2%;
+        }
+    }
+}

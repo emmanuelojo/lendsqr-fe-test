@@ -1,0 +1,176 @@
+$primary-color: #39CDCC;
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+
+.table-row {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    font-family: "Work Sans", Arial, sans-serif;
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+
+    &.last-row {
+        border-bottom: none;
+    }
+
+    div {
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        >p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.42px;
+            text-align: left;
+            color: $secondary-text-color;
+        }
+    }
+
+    .organization {
+        width: 35%;
+    }
+
+    .username {
+        width: 30%;
+        cursor: pointer;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .status {
+        width: 25%;
+    }
+
+    .more {
+        position: relative;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .more-view {
+            position: absolute;
+            top: 20px;
+            right: 2px;
+            width: max-content;
+            height: fit-content;
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            padding: 4px 0;
+            background-color: #FFFFFF;
+            box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+            z-index: 2;
+
+            div {
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 20px;
+                cursor: pointer;
+
+                img {
+                    object-fit: cover;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16.42px;
+                    text-align: left;
+                    color: $secondary-text-color;
+                    flex-wrap: nowrap;
+                }
+            }
+
+            div:hover {
+                background-color: #F3FCFC;
+
+                p {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &:hover .more-view {
+            display: flex;
+        }
+    }
+
+
+
+    @media screen and (min-width:640px) {
+        .organization {
+            width: 30%;
+        }
+
+        .username {
+            width: 25%;
+        }
+
+        .mobile {
+            width: 20%;
+            display: flex;
+        }
+
+        .status {
+            width: 17%;
+        }
+
+        .more {
+            width: 8%;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        width: 100%;
+        gap: 20px;
+
+        .organization {
+            width: 12%;
+        }
+
+        .username {
+            width: 11%;
+        }
+
+        .email {
+            width: 15%;
+            display: flex;
+        }
+
+        .mobile {
+            width: 13%;
+        }
+
+        .date {
+            width: 16%;
+            display: flex;
+        }
+
+        .status {
+            width: 10%;
+        }
+
+        .more {
+            width: 2%;
+        }
+    }
+}

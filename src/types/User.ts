@@ -1,0 +1,32 @@
+export interface User {
+    _id: string;
+    name: string;
+    username: string;
+    email: string;
+    phone: string;
+    company: string;
+    status: string;
+    gender: string;
+    maritalStatus: string;
+    children: string | number;
+    typeOfResidence: string;
+    bvn: string;
+    balance: string;
+    picture: string;
+    officeEmail: string;
+    employmentStatus: string;
+    employmentSector: string;
+    employmentDuration: string;
+    monthlyIncome: string;
+    loanRepayment: string;
+    address: string;
+    levelOfEducation: string;
+    twitter: string;
+    facebook: string;
+    instagram: string;
+    guarantorName: string;
+    guarantorPhone: string;
+    guarantorEmail: string;
+    guarantorRelationship: string;
+    dateJoined: string;
+}

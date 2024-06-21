@@ -17,3 +17,36 @@ body {
     grid-template-columns: auto 1fr;
   }
 }
+
+.container {
+  padding: 16px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  border-radius: 6px;
+}
+
+.other-tab {
+  min-height: 400px;
+  display: grid;
+  place-content: center;
+  font-family: "Work Sans", Arial, sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width:640px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .container {
+    padding: 40px;
+  }
+}

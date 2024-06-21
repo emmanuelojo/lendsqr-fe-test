@@ -1,0 +1,40 @@
+$primary-color: #39CDCC;
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+
+
+.stats-card {
+    min-width: 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    border-radius: 6px;
+    padding: 20px 32px;
+    font-family: "Work Sans", Arial, sans-serif;
+
+    img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.42px;
+        text-align: left;
+        color: $secondary-text-color;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.15px;
+        text-align: left;
+        color: $primary-text-color;
+    }
+}

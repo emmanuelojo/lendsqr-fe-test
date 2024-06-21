@@ -1,0 +1,103 @@
+$primary-color: #39CDCC;
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+
+.filter-modal {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 270px;
+    height: 600px;
+    display: grid;
+    gap: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(84, 95, 125, 0.14);
+    background-color: #FFFFFF;
+    padding: 20px 16px;
+    font-family: "Work Sans", Arial, sans-serif;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    z-index: 10;
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+
+    .filter-option {
+        display: grid;
+        gap: 4px;
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.42px;
+            text-align: left;
+            color: $secondary-text-color;
+        }
+
+        .custom-border {
+            width: 230px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            border: 1px solid $primary-text-color;
+            border-radius: 8px;
+            padding: 0 20px;
+
+            select {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16.42px;
+                text-align: left;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        button {
+            width: 98px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16.42px;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        button:nth-child(1) {
+            border: 1px solid $secondary-text-color;
+            background-color: transparent;
+            color: $secondary-text-color;
+        }
+
+        button:nth-child(2) {
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            color: #FFFFFF;
+        }
+
+    }
+
+    @media screen and (min-width: 640px) {
+        left: 30px;
+    }
+}
