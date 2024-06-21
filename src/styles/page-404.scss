@@ -1,0 +1,11 @@
+.page-404 {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
