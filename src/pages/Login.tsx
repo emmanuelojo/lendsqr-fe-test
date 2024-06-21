@@ -22,7 +22,6 @@ const Login = () => {
         };
 
         dispatch(setUserEmail(data.email));
-        localStorage.setItem("auth", "true");
 
         navigate("/users");
     };

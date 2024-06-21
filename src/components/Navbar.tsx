@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/navbar.scss";
 import UserImage from "../assets/images/user-image.png";
 import SearchIcon from "../assets/icons/search-icon.png";
@@ -11,7 +11,7 @@ import { truncateString } from "../helpers/stringHelper";
 
 const Navbar = () => {
     const [openSidebar, setOpenSidebar] = useState(false);
-    const email = useAppSelector((store) => store.auth.email);
+    const [userEmail, setEmail] = useState("");
     const sidebarStatus = useAppSelector((store) => store.sidebar.sidebarVisible);
     const dispatch = useAppDispatch();
 
@@ -19,6 +19,11 @@ const Navbar = () => {
         dispatch(toggleSidebarVisible(!openSidebar));
         setOpenSidebar(!openSidebar);
     };
+
+    useEffect(() => {
+        let mail = localStorage.getItem("email");
+        mail ? setEmail(mail) : setEmail("Adedeji");
+    }, []);
 
     return (
         <nav>
@@ -43,7 +48,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="profile">
-                        <p className="user-name"> {truncateString(email, 10)} </p>
+                        <p className="user-name"> {truncateString(userEmail, 10)} </p>
 
                         <div className="caret-down-icon">
                             <img src={CaretDownIcon} alt="Caret Down icon" />

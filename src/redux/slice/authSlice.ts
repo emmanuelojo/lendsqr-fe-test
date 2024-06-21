@@ -10,6 +10,8 @@ const authSlice = createSlice({
     reducers: {
         setUserEmail: (state = initialState, action: PayloadAction<string>) => {
             state.email = action.payload;
+            localStorage.setItem("auth", "true");
+            localStorage.setItem("email", action.payload);
         },
     },
 });
