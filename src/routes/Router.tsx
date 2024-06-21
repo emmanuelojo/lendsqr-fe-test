@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../pages/Login";
 import UsersList from "../pages/UsersList";
+import UserDetails from "../pages/UserDetails";
 import OtherPages from "../pages/OtherPages";
 import Page404 from "../pages/Page404";
 import ProtectedRoutes from "./ProtectedRoutes";
@@ -13,6 +14,7 @@ export const Router = () => {
                 <Route element={<ProtectedRoutes />}>
                     <Route path="/" element={<OtherPages />} />
                     <Route path="/users" element={<UsersList />} />
+                    <Route path="/users/:id" element={<UserDetails />} />
                     <Route path="/guarantors" element={<OtherPages />} />
                     <Route path="/loans" element={<OtherPages />} />
                     <Route path="/decision-models" element={<OtherPages />} />
