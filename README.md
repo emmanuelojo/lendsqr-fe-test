@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# Lendsqr Frontend Engineer Assessment 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Statement of Problem
+To proceed  to the next stage of the interview process, candidates must build pixel-perfect replica of screens in the Figma file.  
+Figma file: https://www.google.com/url?q=https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/Frontend&sa=D&source=editors&ust=1719067659927449&usg=AOvVaw08kIXoxBzrKZ_Gkvm9jM8H/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Goals/Objectives
+1. Screens to build
+    - Login
+    - Dashboard (key components include Sidebar, Navbar)
+    - Users
+    - User details
+2. The user pages should pull data from a mock api with 500 records
+3. Make use of localStorage  to store and retrieve user details on the user details page.
+4. Ensure screens are mobile responsive
+5. Some details are intentionally left out of this instruction set. Details I focused on seeing primary focus is on the users and user details pages were
+    - Sorting by columns (ascending and descending order)
+    - Filter functionalities
+    - User details tabs
+6. Unit testing with positive and negative scenarios
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Stack Used
+* React
+* Typescript
+* SCSS
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+The above were used according to the stack currently being used at Lendsqr.
+Using React, TypeScript, and SCSS together provides a powerful framework for building modern web applications that are scalable, maintainable, and efficient. The strengths of each technology complements the others to deliver a robust development experience and high-quality end products.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Links To Result
+
+Website: https://emmanuel-ojo-lendsqr-fe-test.netlify.app
+
+GitHub repo: https://github.com/emmanuelojo/lendsqr-fe-test/
+
+Documentation: https://docs.google.com/document/d/1mcyQerV_cakuDeBILJ45n-P22yazHobfMhRyND9BAHw/edit?usp=sharing/
+
+Note: To login, use any dummy email and password combination.
